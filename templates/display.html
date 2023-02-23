@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <a href="javascript:window.history.go(-1)">Back</a> <!-- Displayed on top of a potentially large JSON response, so it will remain visible -->
+    <h1>Virtual Machines</h1>
+    {% for vm in vm_names %}
+        <row>
+            <p>{{ vm }}</p>
+            <a href="/start_vm/{{ vm }}"  target="_blank" rel="noopener noreferrer">Start</a>
+            <a href="/stop_vm/{{ vm }}"  target="_blank" rel="noopener noreferrer">Stop</a>
+            <a href="/vm_status/{{ vm }}"  target="_blank" rel="noopener noreferrer">Status</a>
+        </row>
+        
+    {% endfor %}
+</body>
+</html>
