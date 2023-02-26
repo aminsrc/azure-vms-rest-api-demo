@@ -1,13 +1,10 @@
 from flask import Flask, render_template, session, request, redirect, url_for
-from flask_session import Session  # gun
-from azure.identity import DefaultAzureCredential
-from azure.mgmt.compute import ComputeManagementClient
+from flask_session import Session
 import identity, identity.web
 import requests
 import app_config
 import msal
 import uuid
-from pprint import pprint
 
 app = Flask(__name__)
 app.config.from_object(app_config)
